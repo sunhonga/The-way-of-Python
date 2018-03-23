@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function (){
+            var txt = document.getElementById("d1");
+            txt.focus();
+            var d2 = document.getElementById('d2');
+            d2.onmousemove = function () {
+                this.select();
+            }
+        }
+    </script>
+</head>
+<body>
+自动获得焦点：<input type="text" id="d1"> 鼠标经过选择表单：<input type="text" id="d2">
+</body>
+</html>
+<!--自动获得焦点：txt.focus();鼠标经过选择表单：this.select()-->

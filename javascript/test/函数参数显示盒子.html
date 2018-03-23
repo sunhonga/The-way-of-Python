@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;height: 100px;background-color: purple;margin-bottom: 10px;display: none;
+        }
+    </style>
+    <script>
+        function fun(obj) {
+            var a=document.getElementById(obj);
+            a.style.display='block';
+        }
+    </script>
+</head>
+<body>
+<button onclick="fun('box1');">第1个盒子</button>
+<button onclick="fun('box2');">第2个盒子</button>
+<button onclick="fun('box3');">第3个盒子</button>
+<button onclick="fun('box4');">第4个盒子</button>
+<div id="box1">1</div>
+<div id="box2">2</div>
+<div id="box3">3</div>
+<div id="box4">4</div>
+</body>
+</html>

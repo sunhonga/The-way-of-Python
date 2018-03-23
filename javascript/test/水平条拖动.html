@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .scroll {width: 500px;position: relative;
+            height: 8px;margin: 100px;background-color: #5EFF5E}
+        .bar {
+            width: 10px;height: 24px;background-color: blue;position: absolute;top: -8px;left: 0;cursor: pointer;
+        }
+        #mask {
+            width: 0;position: absolute;
+            height: 8px;background-color: blue;top: 0px;left: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="scroll" id="d1">
+    <div class="bar" id="d2"></div>
+    <div id="mask"></div>
+</div>
+</body>
+</html>
+<script>
+    var d1 = document.getElementById('d1');
+    var d2 = document.getElementById('d2');
+    var mask = document.getElementById('mask');
+    var x= 0;
+    d2.onmousedown =function (event) {
+            var that = this ;
+            var leftval = event.clientX - this.offsetLeft ;
+        document.onmousemove = function (event1) {
+             x = event1.clientX - leftval;
+             if (x < 0 ){
+                 that.style.left = 0 ;
+             }
+             else if (x>490) {
+                 that.style.left = '490px' ;
+             }
+             else {d2.style.left = x +'px';}
+             mask.style.width = that.style.left;
+
+        }
+        document.onmouseup = function () {
+            document.onmousemove = null ;
+        }
+    }
+</script>

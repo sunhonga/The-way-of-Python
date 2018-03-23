@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+        *{margin: 0;padding: 0;}
+        #mask {width: 100%;height: 100%;opacity: 0.4;background-color: black;position: fixed;top: 0;left: 0;display: none}
+        #show {width: 300px;height: 300px;background-color: white;position: fixed;top: 50%;left: 50%;
+        margin: -150px 0 0 -150px ;display: none}
+    </style>
+</head>
+<body>
+<a href="javascript:;" id="login">登录</a>
+<a href="javascript:;">注册</a>
+<div id="mask"></div>
+<div id="show"></div>
+</body>
+</html>
+<script>
+    function $(id) {return document.getElementById(id)};
+    $('login').onclick = function (event) {
+        $('mask').style.display = 'block';
+        $('show').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        var event = event || window.event ;
+        if (event && event.stopPropagation) {event.stopPropagation()}
+        else  {event.cancelBubble = true ;}
+    }
+    document.onclick = function (event) {
+        var event = event || window.event ;//兼容写法
+        var targetid = event.target ? event.target.id :event.srcElement.id ;//兼容写法
+        if (targetid != 'show') {
+        $('mask').style.display = 'none';
+        $('show').style.display = 'none';
+        document.body.style.overflow = 'visible';
+        }
+    }
+
+</script>

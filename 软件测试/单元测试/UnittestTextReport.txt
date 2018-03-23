@@ -1,0 +1,61 @@
+test_add (test_mathfunc.TestMathFunc) ... ok
+test_minus (test_mathfunc.TestMathFunc) ... ok
+test_divide (test_mathfunc.TestMathFunc) ... FAIL
+
+======================================================================
+FAIL: test_divide (test_mathfunc.TestMathFunc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\jichu\软件测试\单元测试\test_mathfunc.py", line 17, in test_divide
+    self.assertNotEqual(2.5,divide(5,2))
+AssertionError: 2.5 == 2.5
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.010s
+
+FAILED (failures=1)
+test_add (test_mathfunc.TestMathFunc) ... ok
+test_minus (test_mathfunc.TestMathFunc) ... ok
+test_divide (test_mathfunc.TestMathFunc) ... FAIL
+
+======================================================================
+FAIL: test_divide (test_mathfunc.TestMathFunc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\jichu\软件测试\单元测试\test_mathfunc.py", line 21, in test_divide
+    self.assertNotEqual(2.5,divide(5,2))
+AssertionError: 2.5 == 2.5
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.024s
+
+FAILED (failures=1)
+test_add (test_mathfunc.TestMathFunc) ... ok
+test_minus (test_mathfunc.TestMathFunc) ... ok
+test_divide (test_mathfunc.TestMathFunc) ... FAIL
+
+======================================================================
+FAIL: test_divide (test_mathfunc.TestMathFunc)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\jichu\软件测试\单元测试\test_mathfunc.py", line 30, in test_divide
+    self.assertNotEqual(2.5,divide(5,2))
+AssertionError: 2.5 == 2.5
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (failures=1)
+test_add (test_mathfunc.TestMathFunc) ... ok
+test_minus (test_mathfunc.TestMathFunc) ... ok
+test_divide (test_mathfunc.TestMathFunc) ... skipped "I don't want to run this case."
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK (skipped=1)
+..s
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK (skipped=1)

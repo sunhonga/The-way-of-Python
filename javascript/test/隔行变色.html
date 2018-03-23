@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *margin{
+            margin: 0px;padding: 0px;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li{
+            margin: 2px;width: 200px;
+        }
+        .current{
+            background-color:mediumvioletred !important;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var list = document.getElementsByTagName('li');
+            for (var i = 0 ;i<list.length;i++){
+                if (i%2 != 0) {
+                    list[i].style.backgroundColor = 'red';
+                }
+                list[i].onmouseover = function () {
+                    this.className = 'current';
+                }
+                list[i].onmouseout = function () {
+                    this.className = '';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li><span>上证指数</span> <span>10-26</span> <span>3126</span> <span>3.56%</span></li>
+        <li><span>上证指数</span> <span>10-26</span> <span>3126</span> <span>3.56%</span></li>
+        <li><span>上证指数</span> <span>10-26</span> <span>3126</span> <span>3.56%</span></li>
+        <li><span>上证指数</span> <span>10-26</span> <span>3126</span> <span>3.56%</span></li>
+        <li><span>上证指数</span> <span>10-26</span> <span>3126</span> <span>3.56%</span></li>
+        <li><span>上证指数</span> <span>10-26</span> <span>3126</span> <span>3.56%</span></li>
+        <li><span>上证指数</span> <span>10-26</span> <span>3126</span> <span>3.56%</span></li>
+        <li><span>上证指数</span> <span>10-26</span> <span>3126</span> <span>3.56%</span></li>
+        <li><span>上证指数</span> <span>10-26</span> <span>3126</span> <span>3.56%</span></li>
+        <li><span>上证指数</span> <span>10-26</span> <span>3126</span> <span>3.56%</span></li>
+        <li><span>上证指数</span> <span>10-26</span> <span>3126</span> <span>3.56%</span></li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #demo{
+            font-size: 30px;text-align: center;color: red;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var demo =document.getElementById('demo');
+            var endTime = new Date('2018/2/16 12:00:00');
+            setInterval(clock,1000);
+            function clock() {
+                var nowTime = new Date();
+                var second  = (endTime.getTime()-nowTime.getTime())/1000 ;
+                var d = parseInt(second/3600/24);
+                var h = parseInt(second/3600%24);
+                var m = parseInt(second/60%60);
+                var s = parseInt(second%60);
+                d<10 ? d='0'+d : d ;
+                h<10 ? h='0'+h : h ;
+                m<10 ? m='0'+m : m ;
+                s<10 ? s='0'+s : s ;
+                demo.innerHTML = "距离春节还有："+d+'天'+h+'时'+m+'分'+s+"秒";
+                }
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="demo"></div>
+</body>
+</html>

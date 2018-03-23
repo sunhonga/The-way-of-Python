@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {position: absolute;
+            height: 100px;width: 100px;left:0;top: 100px;background-color: red; }
+    </style>
+</head>
+<body>
+<button id="btn">点击运动</button>
+<div id="box"></div>
+</body>
+</html>
+<script>
+    var btn = document.getElementById('btn');
+    var box = document.getElementById('box');
+    var kaishi = 0 ;
+    var target = 500 ;
+    btn.onclick= function () {
+        setInterval(function () {
+            kaishi= kaishi +(target-kaishi)/50 ;
+            box.style.left = kaishi+'px';
+        },50)
+    }
+
+</script>

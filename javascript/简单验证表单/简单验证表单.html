@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0}
+        .box{
+            text-align: center;margin: 100px auto;
+        }
+        span {
+            display: inline-block;width: 150px;height: 20px;border: 1px solid #ccc;
+            font-size: 12px;text-align: left;padding-left: 20px;background-color: #eee;color: #999;
+        }
+        .right {
+            color: #5EFF5E;
+            background: url("images/right.png") no-repeat #DFFFDF 4px 3px;
+            border: 1px solid #ACFFAC;
+        }
+        .wrong{
+            background: url("images/wrong.png") no-repeat #FFDCD0 4px 3px;
+            border: 1px solid #FFAC91;
+            color: #FF6B39;
+        }
+    </style>
+    <script>
+//        错误1单词拼写错误result拼写错误，2window单词打错，3函数名写错，4忘记写分号
+        window.onload=function ()
+        {
+            function  $id(id) {return document.getElementById(id);}
+            $id('txt').onblur=function ()
+            {
+                if (this.value == '')
+                {
+                    $id('result').className='wrong';
+                    $id('result').innerHTML='内容不能为空';
+                }
+                else if (isNaN(this.value))
+                {
+                    $id('result').className='wrong';
+                    $id('result').innerHTML='请输入数字思密达';
+                }
+                else if (this.value>150 || this.value<0)
+                {
+                    $id('result').className='wrong';
+                    $id('result').innerHTML='请输入合法的范围';
+                }
+                else
+                {
+                    $id('result').className='right';
+                    $id('result').innerHTML='输入正确';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="d1" class="box">
+        语文:   <input type="text" id="txt"> <span id="result">请输入成绩</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0}
+        ul{list-style: none;}
+        .box {
+            width: 360px;height: 70px;margin: 100px  auto;border: solid 1px gray;
+            padding-top: 360px;overflow: hidden;background:url("01big.jpg") no-repeat;
+        }
+        .box li{
+            float: left;
+        }
+        .box ul{
+            border-top: solid 1px gray;overflow: hidden;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var box=document.getElementById("d1");
+            function fun(liid,dz) {
+                var obj=document.getElementById(liid);
+                obj.onmouseover=function () {
+                    box.style.backgroundImage=dz;
+                }
+            }
+            fun('li01','url(01big.jpg)')
+            fun('li02','url(02big.jpg)')
+            fun('li03','url(03big.jpg)')
+            fun('li04','url(04big.jpg)')
+            fun('li05','url(05big.jpg)')
+        }
+    </script>
+</head>
+<body>
+<div class="box" id="d1">
+    <ul>
+        <li id="li01"><img src="01.jpg" alt=""></li>
+        <li id="li02"><img src="02.jpg" alt=""></li>
+        <li id="li03"><img src="03.jpg" alt=""></li>
+        <li id="li04"><img src="04.jpg" alt=""></li>
+        <li id="li05"><img src="05.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>

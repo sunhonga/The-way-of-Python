@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function panduanzhishu(num) {
+            var count=0;
+            for(var i =1;i<=num;i++){
+                if (num%i==0){
+                    count++;
+                }
+            }
+            if (count==2){
+                return true
+            }else {
+                return false
+            }
+        }
+        function gedebahe(num1) {
+            for (var i=1;i<=num1;i++ ){
+                if(panduanzhishu(i) && panduanzhishu(num1-i)){
+                    console.log(i+"  "+(num1-i))
+                }
+            }
+        }
+        gedebahe(100)
+    </script>
+</body>
+</html>

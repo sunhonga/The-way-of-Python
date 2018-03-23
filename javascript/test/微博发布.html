@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        ul li {
+            list-style: none;
+        }
+        .box{
+            margin: 100px auto;
+            width: 600px;height: auto;padding: 30px 0;
+            border: 1px solid #333;
+        }
+        textarea {
+            width: 450px;resize: none;//禁止用户拖动。
+        }
+        .box li {
+            width: 450px;line-height: 30px;border-bottom: 1px dashed #ccc;margin-left: 80px;
+        }
+        a {
+            float: right;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementsByTagName('button')[0];
+            var txt = document.getElementsByTagName('textarea')[0];
+            var ul =document.createElement('ul');
+            btn.parentNode.appendChild(ul);
+            btn.onclick = function () {
+                if (txt.value == ''){return false;}
+                var li =document.createElement('li');
+                li.innerHTML = txt.value+"<a href='javascript:;'>删除</a>";
+                if (ul.children.length == 0 ){
+                    ul.appendChild(li);
+                }else {
+                    ul.insertBefore(li,ul.children[0]);
+                }
+                txt.value = '';
+                var as = document.getElementsByTagName('a');
+                for (var i = 0 ; i<as.length;i++){
+                as[i].onclick = function () {
+                    ul.removeChild(this.parentNode);
+                }
+            }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    微博发布：<textarea name="" id="" cols="30" rows="10"></textarea><button>发布</button>
+   <!-- <ul id="ul">
+        <li>qwe</li>
+        <li>qwe</li>
+        <li>qwe</li>
+    </ul>-->
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+str =r"C:\Python34\;C:\Python34\Scripts;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Google\Chrome\Application;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Users\Administrator\Downloads\IEDriverServer_Win32_3.4.0;C:\Program Files (x86)\Mozilla Firefox\searchplugins;%MAVEN_HOME%\bin;"
+print(str.split(";"))
+
+# C:\\Program Files (x86)\\Google\\Chrome\\Application

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .box {
+            width: 730px;height: 454px;margin: 100px auto;
+            overflow: hidden;position: relative;
+        }
+        ul li {list-style: none}
+        .circle{
+            position: absolute;
+            left: 50%;
+            margin-left: -50px;
+            bottom: 10px;
+        }
+        .circle span {
+            float: left;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: pink;
+            text-align: center;
+            line-height: 18px;
+            margin-right: 10px;
+            cursor: pointer
+        }
+        .current{
+            background-color: deeppink;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var scroll = document.getElementById('scroll');
+            var circle = document.createElement('div');
+            //circle.className = 'circle';更改的类名
+            circle.setAttribute('class','circle');//此方法常用
+            scroll.appendChild(circle);
+            var ul = document.getElementById('ul');
+            var lis = ul.children;
+            //alert(lis.length);
+            for (var i = 0 ;i<lis.length ; i++)
+            {
+                var newspan = document.createElement('span');
+                newspan.innerHTML = i+1 ;
+                circle.appendChild(newspan);
+            }
+            var child = circle.children;
+            child[0].setAttribute('class','current');
+        }
+    </script>
+</head>
+<body>
+<div class="box" id="scroll">
+    <div class="slider">
+        <ul id="ul">
+            <li><img src="11.jpg" alt=""></li>
+            <li><img src="22.jpg" alt=""></li>
+            <li><img src="33.jpg" alt=""></li>
+            <li><img src="44.jpg" alt=""></li>
+            <li><img src="55.jpg" alt=""></li>
+            <li><img src="66.jpg" alt=""></li>
+        </ul>
+    </div>
+    <!--<div class="circle">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+    </div>-->
+</div>
+</body>
+</html>

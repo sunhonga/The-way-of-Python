@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        #box {
+            margin: 100px 100px;
+        }
+        .box1{
+            width: 412px;
+        }
+        .box1 button{
+            width: 100px;
+        }
+        .box2 {
+            width: 412px;height: 412px;overflow: hidden;
+        }
+        .current {
+            background-color: red;
+        }
+    </style>
+     <script>
+        window.onload = function () {
+            var btns = document.getElementsByTagName('button');
+            var box = document.getElementById('d2').getElementsByTagName('div')
+            for (var i = 0;i<btns.length;i++){
+                btns[i].onclick = function (num) {
+                    return function () {  //这句话你的function里面不能接参数，因为她是event事件。
+                        for (var j= 0; j<btns.length;j++){
+                        btns[j].className = '';
+                        box[j].style.display ='none';
+                        };
+                        console.log(num);
+                        btns[num].className = 'current';
+                        box[num].style.display = 'block';
+                    }
+
+                } (i);
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <div class="box1" id="d1">
+        <button>灰太狼</button>
+        <button>红太狼</button>
+        <button>小灰灰</button>
+        <button>喜洋洋</button>
+    </div>
+    <div class="box2" id="d2">
+        <div style="display: block"><img src="images/灰太狼.jpg" alt=""></div>
+        <div><img src="images/红太狼.jpg" alt=""></div>
+        <div><img src="images/小灰灰.jpg" alt=""></div>
+        <div><img src="images/喜洋洋.jpg" alt=""></div>
+    </div>
+</div>
+</body>
+</html>

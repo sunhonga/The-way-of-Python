@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;padding: 0;
+        }
+        .box {
+            height: 100px;text-align: center;padding: 25px;
+        }
+
+    </style>
+    <script>
+        window.onload=function () {
+            var pic1=document.getElementById('pic1')
+            var pic2=document.getElementById('pic2')
+            var pic3=document.getElementById('pic3')
+            var pic4=document.getElementById('pic4')
+            var pic5=document.getElementById('pic5')
+            pic1.onclick=function () {document.body.style.backgroundImage="url(1.jpg)"}
+            pic2.onclick=function () {document.body.style.backgroundImage="url(2.jpg)"}
+            pic3.onclick=function () {document.body.style.backgroundImage="url(3.jpg)"}
+            pic4.onclick=function () {document.body.style.backgroundImage="url(4.jpg)"}
+            pic5.onclick=function () {document.body.style.backgroundImage="url(5.jpg)"}
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <img src="1.jpg" alt="" id="pic1" width="150px">
+    <img src="2.jpg" alt="" id="pic2" width="150px">
+    <img src="3.jpg" alt="" id="pic3" width="150px">
+    <img src="4.jpg" alt="" id="pic4" width="150px">
+    <img src="5.jpg" alt="" id="pic5" width="150px">
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #p{
+            width: 200px;padding: 10px;
+            margin: 10px;border: 10px solid blue;
+            height: 200px;position: relative;background-color: #ACFFAC;}
+        #s {width: 50px;
+            margin: 0px;
+            padding: 10px;
+            border: 10px solid purple;
+            height: 50px;top: 0px;left: 0px;background-color: red;position: absolute;}
+    </style>
+</head>
+<body>
+<div id="p">
+    <div id="s"></div>
+</div>
+</body>
+</html>
+<script>
+    var p = document.getElementById('p');
+    var s = document.getElementById('s');
+    console.log(s.offsetLeft)
+
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;background-color: pink;
+            position: absolute;top: 50px;
+        }
+    </style>
+</head>
+<body>
+<button id="btn200">200</button>
+<button id="btn400">400</button>
+<div id="box"></div>
+</body>
+</html>
+<script>
+    function getStyle(obj,attr) {
+        if (obj.currentStyle){return obj.currentStyle[attr];}
+        else {return window.getComputedStyle(obj,null)[attr];}
+    }
+    var btn200 = document.getElementById('btn200');
+    var btn400 = document.getElementById('btn400');
+    var box= document.getElementById('box');
+    btn200.onclick = function () { animate(box,'left',400) };//排错错误，1，忘记写function直接调用函数animate
+    btn400.onclick = function () { animate(box,'width',500) };//2，传的属性忘记加引号。不加引号是变量，记得加上引号。
+    function animate(obj,attr,target) {
+        clearInterval(obj.timer);
+        obj.timer  =setInterval(function () {
+             var current = parseInt(getStyle(obj,attr));
+             var step = (target-current)/10 ;
+             step = step >0 ? Math.ceil(step):Math.floor(step);
+             obj.style[attr] = current + step +'px' ;
+             if (target == current){clearInterval(obj.timer);}//3.直接清楚timer。忘记加obj.
+        },30)
+    }
+</script>

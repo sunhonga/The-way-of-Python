@@ -1,0 +1,347 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>kamidox.com</title>
+		<meta name="description" content="">
+		<meta name="author" content="Joey Huang">
+
+		<link rel="stylesheet" href="./theme/css/foundation.css" />
+		<link rel="stylesheet" href="./theme/css/pygment/monokai.css" />
+		<link rel="stylesheet" href="./theme/css/custom.css" />
+
+
+		<link rel="shortcut icon" href="./theme/img/favicon.ico">
+
+		<script src="./theme/js/modernizr.js"></script>
+
+		<!-- Feeds -->
+
+
+		<!-- mathjax config similar to math.stackexchange -->
+		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script>
+		MathJax.Hub.Config({
+		  config: ["MMLorHTML.js"],
+		  extensions: ["tex2jax.js"],
+		  jax: ["input/TeX"],
+		  tex2jax: {
+		    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+		    processEscapes: false
+		  },
+		  TeX: {
+		    extensions: ["AMSmath.js", "AMSsymbols.js"],
+		    TagSide: "right",
+		    TagIndent: ".8em",
+		    MultLineWidth: "85%",
+		    equationNumbers: {
+		      autoNumber: "AMS",
+		    },
+		    unicode: {
+		      fonts: "STIXGeneral,'Arial Unicode MS'"
+		    }
+		  },
+		  showProcessingMessages: false
+		});
+		</script>
+	</head>
+	<body>
+		<div class="off-canvas-wrap">
+			<div class="inner-wrap">
+				<!-- mobile top bar to activate nav -->
+				<nav class="tab-bar show-for-small">
+					<section class="left-small">
+						<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+					</section>
+
+					<section class="middle tab-bar-section">
+						<h1 class="title">kamidox.com</h1>
+					</section>
+				</nav>
+
+				<!-- mobile side bar nav -->
+				<aside class="left-off-canvas-menu">
+					<ul class="off-canvas-list">
+							<li><a href="http://blog.kamidox.com">Home</a></li>
+							<li><a href="http://blog.kamidox.com/about.html">About</a></li>
+
+						<li><label>Categories</label></li>
+							<li ><a href="./category/android.html">android</a></li>
+							<li ><a href="./category/essay.html">essay</a></li>
+							<li ><a href="./category/flask.html">flask</a></li>
+							<li ><a href="./category/ml.html">ml</a></li>
+							<li ><a href="./category/nlp.html">nlp</a></li>
+							<li ><a href="./category/python.html">python</a></li>
+							<li ><a href="./category/tools.html">tools</a></li>
+							<li ><a href="./category/weapp.html">weapp</a></li>
+							<li ><a href="./category/web.html">web</a></li>
+							<li ><a href="./category/werkzeug.html">werkzeug</a></li>
+
+
+
+
+						<li><label>Monthly Archives</label></li>
+									<li><a href="/posts/2017/05/index.html">May 2017 (2)</a></li>
+									<li><a href="/posts/2017/04/index.html">April 2017 (1)</a></li>
+									<li><a href="/posts/2017/02/index.html">February 2017 (1)</a></li>
+									<li><a href="/posts/2017/01/index.html">January 2017 (1)</a></li>
+									<li><a href="/posts/2016/12/index.html">December 2016 (2)</a></li>
+									<li><a href="/posts/2016/11/index.html">November 2016 (3)</a></li>
+									<li><a href="/posts/2016/10/index.html">October 2016 (1)</a></li>
+									<li><a href="/posts/2016/09/index.html">September 2016 (1)</a></li>
+									<li><a href="/posts/2016/03/index.html">March 2016 (2)</a></li>
+									<li><a href="/posts/2016/02/index.html">February 2016 (2)</a></li>
+									<li><a href="/posts/2016/01/index.html">January 2016 (2)</a></li>
+									<li><a href="/posts/2015/12/index.html">December 2015 (10)</a></li>
+									<li><a href="/posts/2015/11/index.html">November 2015 (6)</a></li>
+									<li><a href="/posts/2015/10/index.html">October 2015 (2)</a></li>
+									<li><a href="/posts/2015/09/index.html">September 2015 (7)</a></li>
+									<li><a href="/posts/2015/08/index.html">August 2015 (1)</a></li>
+									<li><a href="/posts/2015/07/index.html">July 2015 (1)</a></li>
+									<li><a href="/posts/2015/05/index.html">May 2015 (1)</a></li>
+									<li><a href="/posts/2015/04/index.html">April 2015 (1)</a></li>
+									<li><a href="/posts/2015/03/index.html">March 2015 (3)</a></li>
+									<li><a href="/posts/2015/02/index.html">February 2015 (2)</a></li>
+									<li><a href="/posts/2015/01/index.html">January 2015 (2)</a></li>
+									<li><a href="/posts/2014/12/index.html">December 2014 (3)</a></li>
+									<li><a href="/posts/2014/11/index.html">November 2014 (4)</a></li>
+									<li><a href="/posts/2014/10/index.html">October 2014 (6)</a></li>
+									<li><a href="/posts/2014/09/index.html">September 2014 (1)</a></li>
+									<li><a href="/posts/2014/07/index.html">July 2014 (1)</a></li>
+
+
+					</ul>
+				</aside>
+
+				<!-- top bar nav -->
+				<nav class="top-bar hide-for-small-only" data-topbar>
+					<ul class="title-area">
+						<li class="name">
+							<h1><a href="./">kamidox.com</a></h1>
+						</li>
+					</ul>
+
+					<section class="top-bar-section">
+						<ul class="left">
+								<li><a href="http://blog.kamidox.com">Home</a></li>
+								<li><a href="http://blog.kamidox.com/about.html">About</a></li>
+
+						</ul>
+					</section>
+				</nav>
+
+				<!-- Main Page Content and Sidebar -->
+				<section class="main-section">
+					<div class="row">
+						<!-- Main Content -->
+						<div class="medium-9 small-12 columns" role="content">
+
+<article>
+	<h3><a href="./gitlab.html">基于 Gitlab 的源代码管理及开发模型</a></h3>
+	<h6>Post by <a href="./author/joey-huang.html">Joey Huang</a> under <a href="./category/tools.html">tools</a> on 2017-05-14(Sunday) 20:20. Tags: <a href="./tag/tools.html">tools</a>, </h6>
+	<p>团队准备从 SVN 切换到自建的 Git 开发模型，选择了 Gitlab CE 版本作为源码管理平台。本文描述的开发模型适用于嵌入式开发领域，这与 Web 相关产品开发模型有较大差别。</p>
+		<p class="continue"><a href="./gitlab.html">阅读全文 &raquo;</a></p>
+</article>
+<hr />
+<article>
+	<h3><a href="./docs-classification.html">利用朴素贝叶斯算法进行文档分类</a></h3>
+	<h6>Post by <a href="./author/joey-huang.html">Joey Huang</a> under <a href="./category/ml.html">ml</a> on 2017-05-07(Sunday) 23:43. Tags: <a href="./tag/machine-learning.html">machine-learning</a>, </h6>
+	<p>本文利用 scikit-learn 里的朴素贝叶斯算法对文档进行分类，以便更深入地理解贝叶斯算法。这不是篇介绍自然语言处理的文章，语料库直接使用英文，以避免介绍针对中文的分词技术。为了读者更好的理解原理，本文介绍了 TF-IDF ，这是一个表达词语权重信息的模型。</p>
+		<p class="continue"><a href="./docs-classification.html">阅读全文 &raquo;</a></p>
+</article>
+<hr />
+<article>
+	<h3><a href="./naive-bayes.html">零基础学习朴素贝叶斯算法</a></h3>
+	<h6>Post by <a href="./author/joey-huang.html">Joey Huang</a> under <a href="./category/ml.html">ml</a> on 2017-04-30(Sunday) 23:43. Tags: <a href="./tag/machine-learning.html">machine-learning</a>, </h6>
+	<p>忘光了概率统计的知识还想学朴素贝叶斯算法？这一篇就是为你准备的。</p>
+		<p class="continue"><a href="./naive-bayes.html">阅读全文 &raquo;</a></p>
+</article>
+<hr />
+<article>
+	<h3><a href="./weapp-doc.html">微信小程序离线开发文档</a></h3>
+	<h6>Post by <a href="./author/joey-huang.html">Joey Huang</a> under <a href="./category/weapp.html">weapp</a> on 2017-02-01(Wednesday) 14:52. Tags: <a href="./tag/weapp.html">weapp</a>, </h6>
+	<p>边开发微信小程序边打开腾讯的微信小程序开发文档的网站，跳转慢，搜索渣？这里有一个更优雅的解决方法。</p>
+		<p class="continue"><a href="./weapp-doc.html">阅读全文 &raquo;</a></p>
+</article>
+<hr />
+<article>
+	<h3><a href="./weapp-capability.html">微信小程序兼容性问题</a></h3>
+	<h6>Post by <a href="./author/joey-huang.html">Joey Huang</a> under <a href="./category/weapp.html">weapp</a> on 2017-01-19(Thursday) 22:52. Tags: <a href="./tag/weapp.html">weapp</a>, </h6>
+	<p>本文我们来谈变微信小程序系统兼容性的那些坑。</p>
+		<p class="continue"><a href="./weapp-capability.html">阅读全文 &raquo;</a></p>
+</article>
+<hr />
+<article>
+	<h3><a href="./mysqlclient.html">macOS Sierra 上安装 mysqlclient 问题</a></h3>
+	<h6>Post by <a href="./author/joey-huang.html">Joey Huang</a> under <a href="./category/python.html">python</a> on 2016-12-22(Thursday) 23:23. Tags: <a href="./tag/python.html">python</a>, </h6>
+	<p>macOS Sieria 上安装 mysqlclient 遇到的坑</p>
+		<p class="continue"><a href="./mysqlclient.html">阅读全文 &raquo;</a></p>
+</article>
+<hr />
+<article>
+	<h3><a href="./web-arch-evolution.html">白话网站架构演进</a></h3>
+	<h6>Post by <a href="./author/joey-huang.html">Joey Huang</a> under <a href="./category/web.html">web</a> on 2016-12-02(Friday) 23:52. Tags: <a href="./tag/web.html">web</a>, </h6>
+	<p>读写分离，负载均衡，DNS 动态解析，CDN, memcached, Redis, 动态扩容，你是否曾经被这些名词搞得晕头转向，然后发誓要搞清楚这些概念，然后就没有然后了。或许这篇文章可以让你下次和程序员聊天时可以插一两句话。</p>
+		<p class="continue"><a href="./web-arch-evolution.html">阅读全文 &raquo;</a></p>
+</article>
+<hr />
+<article>
+	<h3><a href="./react-best-practise-demo.html">React 最佳实践示例项目</a></h3>
+	<h6>Post by <a href="./author/joey-huang.html">Joey Huang</a> under <a href="./category/web.html">web</a> on 2016-11-09(Wednesday) 22:52. Tags: <a href="./tag/react.html">react</a>, </h6>
+	<p>Github 上已经有一堆基于 React 的 HackerNews 客户端，为什么还需要一个新的？</p>
+		<p class="continue"><a href="./react-best-practise-demo.html">阅读全文 &raquo;</a></p>
+</article>
+<hr />
+<article>
+	<h3><a href="./weapp-principle.html">微信小程序原理</a></h3>
+	<h6>Post by <a href="./author/joey-huang.html">Joey Huang</a> under <a href="./category/weapp.html">weapp</a> on 2016-11-05(Saturday) 07:52. Tags: <a href="./tag/weapp.html">weapp</a>, </h6>
+	<p>微信小程序使用了前端技术栈 JavaScript/WXML/WXSS。它背后的原理是怎么样的呢？</p>
+		<p class="continue"><a href="./weapp-principle.html">阅读全文 &raquo;</a></p>
+</article>
+<hr />
+<article>
+	<h3><a href="./ipsec-ikev2-vpn.html">step-by-step 构建 IPSec/IKEv2 VPN</a></h3>
+	<h6>Post by <a href="./author/joey-huang.html">Joey Huang</a> under <a href="./category/tools.html">tools</a> on 2016-11-01(Tuesday) 23:22. Tags: <a href="./tag/tools.html">tools</a>, </h6>
+	<p>升级到 iOS 10 和 macOS Sierra 后，安全性较差的 pptp vpn 服务器不能再使用了。那就搭个 IPSec/IKEv2 VPN 服务器吧。</p>
+		<p class="continue"><a href="./ipsec-ikev2-vpn.html">阅读全文 &raquo;</a></p>
+</article>
+<hr />
+
+<div class="row" style="margin-bottom: -1.25em;">
+	<div class="small-12 columns text-center">
+		<div class="pagination-centered">
+			<ul class="pagination">
+				<li class="arrow unavailable"><a href="#">&larr; Previous</a></li>
+				<li class="current"><a href="./index.html">1</a></li>
+				<li class=""><a href="./index2.html">2</a></li>
+				<li class=""><a href="./index3.html">3</a></li>
+				<li class=""><a href="./index4.html">4</a></li>
+				<li class=""><a href="./index5.html">5</a></li>
+				<li class=""><a href="./index6.html">6</a></li>
+				<li class=""><a href="./index7.html">7</a></li>
+				<li class="arrow"><a href="./index2.html">Next &rarr;</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+						</div>
+						<!-- End Main Content -->
+						<!-- Sidebar -->
+						<aside class="medium-3 hide-for-small-only columns">
+							<div class="panel">
+								<h5>Places</h5>
+								<ul class="side-nav">
+										<li><a href="http://blog.kamidox.com/feeds/rss.xml" rel="alternate">RSS Feed</a></li>
+
+								</ul>
+							</div>
+
+
+							<div class="panel">
+								<h5>Categories</h5>
+								<ul class="side-nav">
+										<li><a href="./category/android.html">android</a></li>
+										<li><a href="./category/essay.html">essay</a></li>
+										<li><a href="./category/flask.html">flask</a></li>
+										<li><a href="./category/ml.html">ml</a></li>
+										<li><a href="./category/nlp.html">nlp</a></li>
+										<li><a href="./category/python.html">python</a></li>
+										<li><a href="./category/tools.html">tools</a></li>
+										<li><a href="./category/weapp.html">weapp</a></li>
+										<li><a href="./category/web.html">web</a></li>
+										<li><a href="./category/werkzeug.html">werkzeug</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Tags</h5>
+								<ul class="tag-cloud">
+										<li class="tag-1"><a href="./tag/machine-learning.html">machine-learning</a></li>
+										<li class="tag-4"><a href="./tag/wekzeug.html">wekzeug</a></li>
+										<li class="tag-3"><a href="./tag/pelican.html">pelican</a></li>
+										<li class="tag-4"><a href="./tag/nlp.html">nlp</a></li>
+										<li class="tag-2"><a href="./tag/flask.html">flask</a></li>
+										<li class="tag-2"><a href="./tag/markdown.html">markdown</a></li>
+										<li class="tag-2"><a href="./tag/android.html">android</a></li>
+										<li class="tag-4"><a href="./tag/react.html">react</a></li>
+										<li class="tag-1"><a href="./tag/thought.html">thought</a></li>
+										<li class="tag-4"><a href="./tag/web.html">web</a></li>
+										<li class="tag-4"><a href="./tag/contacts-provider.html">contacts provider</a></li>
+										<li class="tag-4"><a href="./tag/github.html">github</a></li>
+										<li class="tag-2"><a href="./tag/weapp.html">weapp</a></li>
+										<li class="tag-1"><a href="./tag/python.html">python</a></li>
+										<li class="tag-4"><a href="./tag/decorator.html">decorator</a></li>
+										<li class="tag-4"><a href="./tag/contacts.html">contacts</a></li>
+										<li class="tag-4"><a href="./tag/patchrom.html">patchrom</a></li>
+										<li class="tag-3"><a href="./tag/sublime.html">sublime</a></li>
+										<li class="tag-4"><a href="./tag/ebook.html">ebook</a></li>
+										<li class="tag-4"><a href="./tag/miui.html">miui</a></li>
+										<li class="tag-2"><a href="./tag/tools.html">tools</a></li>
+										<li class="tag-4"><a href="./tag/uml.html">uml</a></li>
+										<li class="tag-4"><a href="./tag/socketserver.html">SocketServer</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Monthly Archives</h5>
+								<ul class="side-nav">
+											<li><a href="/posts/2017/05/index.html">May 2017 (2)</a></li>
+											<li><a href="/posts/2017/04/index.html">April 2017 (1)</a></li>
+											<li><a href="/posts/2017/02/index.html">February 2017 (1)</a></li>
+											<li><a href="/posts/2017/01/index.html">January 2017 (1)</a></li>
+											<li><a href="/posts/2016/12/index.html">December 2016 (2)</a></li>
+											<li><a href="/posts/2016/11/index.html">November 2016 (3)</a></li>
+											<li><a href="/posts/2016/10/index.html">October 2016 (1)</a></li>
+											<li><a href="/posts/2016/09/index.html">September 2016 (1)</a></li>
+											<li><a href="/posts/2016/03/index.html">March 2016 (2)</a></li>
+											<li><a href="/posts/2016/02/index.html">February 2016 (2)</a></li>
+											<li><a href="/posts/2016/01/index.html">January 2016 (2)</a></li>
+											<li><a href="/posts/2015/12/index.html">December 2015 (10)</a></li>
+											<li><a href="/posts/2015/11/index.html">November 2015 (6)</a></li>
+											<li><a href="/posts/2015/10/index.html">October 2015 (2)</a></li>
+											<li><a href="/posts/2015/09/index.html">September 2015 (7)</a></li>
+											<li><a href="/posts/2015/08/index.html">August 2015 (1)</a></li>
+											<li><a href="/posts/2015/07/index.html">July 2015 (1)</a></li>
+											<li><a href="/posts/2015/05/index.html">May 2015 (1)</a></li>
+											<li><a href="/posts/2015/04/index.html">April 2015 (1)</a></li>
+											<li><a href="/posts/2015/03/index.html">March 2015 (3)</a></li>
+											<li><a href="/posts/2015/02/index.html">February 2015 (2)</a></li>
+											<li><a href="/posts/2015/01/index.html">January 2015 (2)</a></li>
+											<li><a href="/posts/2014/12/index.html">December 2014 (3)</a></li>
+											<li><a href="/posts/2014/11/index.html">November 2014 (4)</a></li>
+											<li><a href="/posts/2014/10/index.html">October 2014 (6)</a></li>
+											<li><a href="/posts/2014/09/index.html">September 2014 (1)</a></li>
+											<li><a href="/posts/2014/07/index.html">July 2014 (1)</a></li>
+								</ul>
+							</div>
+
+						</aside>
+						<!-- End Sidebar -->
+					</div>
+
+					<!-- Footer -->
+					<footer class="row">
+						<div class="medium-9 small-12">
+							<hr/>
+							<p class="text-center">Powered by <a href="http://getpelican.com">Pelican</a> and <a href="http://foundation.zurb.com/">Zurb Foundation</a>. Theme by <a href="http://hamaluik.com">Kenton Hamaluik</a>.
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253471695'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1253471695%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+							</p>
+						</div>
+					</footer>
+					<!-- End Footer -->
+				</section>
+				<a class="exit-off-canvas"></a>
+			</div><!--off-canvas inner-->
+		</div><!--off-canvas wrap-->
+
+		<script src="./theme/js/jquery.js"></script>
+		<script src="./theme/js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+	</body>
+</html>

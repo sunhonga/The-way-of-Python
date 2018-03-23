@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        body{
+            height: 1000px;
+        }
+        div {
+            position: relative;padding-left: 50px;
+        }
+        #sp1 {
+            width: 50px;height: 50px;position: absolute;font-size: 50px;line-height: 50px;
+            top: -10px;left: 15px;cursor: pointer;
+        }
+        .sp{
+            width: 500px;width: 500px;font-size: 50px;position: absolute;top: 400px;left: 110px;color: red;
+
+         }
+    </style>
+    <script>
+        window.onload = function () {
+            var  sp = document.getElementById('sp1');
+           // var div = document.getElementById('d1');
+            sp.onclick =function () {
+                this.parentNode.style.display = 'none';
+            }
+            function f1() {
+            var tag=document.getElementById(id="sp2");
+            var content=tag.innerText;
+            var f=content.charAt(0);
+            var l=content.substring(1,content.length);
+            var new_content=l+f;
+            tag.innerText=new_content;
+            }
+            setInterval(f1,500)
+        }
+    </script>
+</head>
+<body>
+<div id="d1">
+    <img src="1.png" alt="">
+    <span id="sp1">×</span>
+    <span id="sp2" class="sp">付款,付款,付款,</span>
+</div>
+
+</body>
+</html>

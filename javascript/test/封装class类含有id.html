@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            function getclass(classname,id){
+                if (document.getElementsByClassName)
+                {
+                    if (id)
+                    {
+                        var ele = document.getElementById(id);
+                        return ele.getElementsByClassName(classname);
+                    }
+                    else
+                    {
+                        return document.getElementsByClassName(classname);
+                    }
+                }
+                if (id)
+                {
+                    var eleid = document.getElementById(id );
+                    var dom = eleid.getElementsByTagName('*');
+                }
+                else
+                {
+                    var dom = eleid.getElementsByTagName('*');
+                }
+                var arr = [];
+                for (var i =0;i<dom.length;i++)
+                {
+                    var txtarr = dom[i].className.split(' ');
+                    for (var j = 0 ; j<txtarr.length;j++){
+                        if (txtarr[j ] == classname){ arr.push(dom[i]);}
+                    }
+                }
+                return arr ;
+            }
+            alert(getclass('one').length);
+            alert(getclass('one','d1').length);
+        }
+    </script>
+</head>
+<body>
+    <div class="one two"></div>
+    <div class="test"></div>
+    <div class="one two"></div>
+    <div id="d1">
+        <div class="one two"></div>
+        <div class="test"></div>
+        <div class="one two"></div>
+        <div></div>
+        <div class="one"></div>
+        <div></div>
+        <div class="two test"></div>
+        <div class="test"></div>
+        <div class="two"></div>
+        <div></div>
+    </div>
+    <div class="one"></div>
+    <div></div>
+    <div class="two test"></div>
+    <div class="test"></div>
+    <div class="two"></div>
+    <div></div>
+</body>
+</html>

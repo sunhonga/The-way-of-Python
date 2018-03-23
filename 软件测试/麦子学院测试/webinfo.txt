@@ -1,0 +1,6 @@
+url=http://www.maiziedu.com/
+text_id=登录
+userid=id_account_1
+pwdid=id_password_1
+loginid=login_btn
+errorid=该帐号格式不正确

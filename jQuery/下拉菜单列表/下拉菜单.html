@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;}
+        ul {list-style: none}
+        .wrap {
+            width: 330px;
+            height: 30px;
+            margin: 100px auto  ;
+            background-image: url("imgs/bg.jpg");
+            padding-left: 10px;border: solid 1px red;
+        }
+        .wrap>ul>li {
+            float: left;
+            width: 100px;
+            height: 30px;
+            margin-right: 10px;
+            position: relative;
+        }
+        a{
+            color: black;text-decoration: none;display: block;
+            width: 100px;
+            height: 30px;text-align: center;line-height: 30px;background-image: url("imgs/libg.jpg");
+        }
+        .wrap li ul {
+            /*position: absolute;*/display: none;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.wrap>ul>li').hover(function () {
+                /*slideToggle() 方法通过使用滑动效果（高度变化）来切换元素的可见状态。
+                如果被选元素是可见的，则隐藏这些元素，如果被选元素是隐藏的，则显示这些元素。*/
+                $(this).children('ul').slideToggle('slow');
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <ul>
+        <li><a href="#">一级菜单</a>
+            <ul>
+                <li><a href="#">二级菜单1</a></li>
+                <li><a href="#">二级菜单2</a></li>
+                <li><a href="#">二级菜单3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">一级菜单</a>
+            <ul>
+                <li><a href="#">二级菜单1</a></li>
+                <li><a href="#">二级菜单2</a></li>
+                <li><a href="#">二级菜单3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">一级菜单</a>
+            <ul>
+                <li><a href="#">二级菜单1</a></li>
+                <li><a href="#">二级菜单2</a></li>
+                <li><a href="#">二级菜单3</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+</body>
+</html>

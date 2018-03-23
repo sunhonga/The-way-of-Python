@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div id="de"></div>
+<div></div>
+<div class="one two"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
+<script>
+        window.onload = function () {
+            function getclass(classname) {
+                if (document.getElementsByClassName){
+                    return document.getElementsByClassName(classname);
+                }
+                //由于ie678不支持getElementsByClassName，下的过程是封装ie678通过类名获得元素
+                var arr = [];  //用于返回数组
+                var dom = document.getElementsByTagName('*');//得到所有的标签
+                for(var i = 0;i<dom.length;i++){
+                    var txtarr = dom[i].className.split(' ');
+                    for (var j = 0;j<txtarr.length;j++){
+                        if (txtarr[j] == classname){
+                            arr.push(dom[i]);
+                        }
+                    }
+                }
+                return arr ;
+            }
+            //$('#demo') $('.one') $('div')
+            function $(str) {
+                var s = str.charAt(0);  //#
+                var ss = str.substr(1);   //demo
+                switch (s)
+                {
+                    case '#':
+                        return document.getElementById(ss);
+                        break ;
+                    case '.'  :
+                        return getclass(ss);break;
+                    default :
+                        return document.getElementsByTagName(str);
+                }
+            }
+            $('#de').style.backgroundColor = 'blue';
+            $('.one')[0].style.backgroundColor = 'blue';
+        }
+    </script>

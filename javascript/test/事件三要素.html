@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #demo {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="demo"></div>
+<button id="btn1">改变宽度</button>
+<button id="btn2">改变高度</button>
+<button id="btn3">改变背景颜色</button>
+<script>
+    var demo1=document.getElementById("demo")
+    var btn1=document.getElementById("btn1")
+    var btn2=document.getElementById("btn2")
+    var btn3=document.getElementById("btn3")
+    btn1.onclick=function () {
+        demo1.style.width='400px';
+    }
+    btn2.onclick=function () {
+        demo1.style.height='400px';
+    }
+    btn3.onclick=function () {
+        demo1.style.backgroundColor="blue";
+    }
+</script>
+</body>
+</html>

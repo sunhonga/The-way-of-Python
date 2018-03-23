@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        li{
+            width: 25px;height: 25px;float: left;
+        }
+        div{
+            margin: 100px ;padding: 100px;width: 100px;height: 75px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var list = document.getElementsByTagName('li')
+            for(var i = 0 ;i < list.length;i++){
+                list[i].style.backgroundImage='url(icon_lifeserv.png)';
+                list[i].style.backgroundPosition='-25px '+(-25*i)+'px';
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</div>
+</body>
+</html>

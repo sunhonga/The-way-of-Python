@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            function getclass(classname) {
+                if (document.getElementsByClassName){
+                    return document.getElementsByClassName(classname);
+                }
+                //由于ie678不支持getElementsByClassName，下的过程是封装ie678通过类名获得元素
+                var arr = [];  //用于返回数组
+                var dom = document.getElementsByTagName('*');//得到所有的标签
+                for(var i = 0;i<dom.length;i++){
+                    var txtarr = dom[i].className.split(' ');
+                    for (var j = 0;j<txtarr.length;j++){
+                        if (txtarr[j] == classname){
+                            arr.push(dom[i]);
+                        }
+                    }
+                }
+                return arr ;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="one two"></div>
+<div class="test"></div>
+<div class="one two"></div>
+<div></div>
+<div class="one"></div>
+<div></div>
+<div class="two test"></div>
+<div class="test"></div>
+<div class="two"></div>
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 88px;
+            height: 88px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<img src="img.jpg" alt="" id="img">
+</body>
+</html>
+<script>
+    var img = document.getElementById('img');
+    document.onmousemove = function (event) {
+        targetX = event.clientX-img.offsetWidth/2;
+        targetY = event.clientY-img.offsetHeight/2;
+    }
+    var leaderX=0,leaderY=0,targetX=0,targetY=0
+    setInterval(function () {
+        leaderX = leaderX+(targetX-leaderX)/5;
+        leaderY = leaderY+(targetY-leaderY)/5;
+        img.style.left = leaderX +'px';
+        img.style.top = leaderY +'px';
+    },30)
+</script>

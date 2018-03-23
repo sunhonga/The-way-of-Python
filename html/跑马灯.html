@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id=i1 style="color: red;width: 100%;text-align: center;height: 500px">马哥牛逼，马哥牛逼，</div>
+    <script>
+        function f1() {
+            var tag=document.getElementById(id="i1");
+            var content=tag.innerText;
+            var f=content.charAt(0);
+            var l=content.substring(1,content.length);
+            var new_content=l+f;
+            tag.innerText=new_content;
+        }
+        setInterval(f1,500)
+    </script>
+</body>
+</html>

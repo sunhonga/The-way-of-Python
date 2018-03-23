@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{list-style: none}
+        *{margin:0; padding:0;}
+        div{
+            width: 1150px;
+            height: 400px;
+            margin:50px auto;
+            border:1px solid red;
+            overflow: hidden;
+        }
+        div li {
+            width: 240px;
+            height: 400px;
+            float: left;
+        }
+        div ul {
+            width: 1300px;
+        }
+    </style>
+    <link rel="stylesheet" href="../../../html/04-前端基本功/15-网页特效5/案例/04 旋转木马轮播图/css/css.css">
+
+</head>
+<body>
+<div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>
+<script>
+    function animate(obj,json,fn) {
+                clearInterval(obj.timer)
+                obj.timer =setInterval(function () {
+                    var flag = true ;
+                    for (var key in json) {
+                        var current = parseInt(getStyle(obj,key));
+                        step = (json[key]-current)/10 ;
+                        step =step > 0 ? Math.ceil(step) :Math.floor(step);
+                        obj.style[key] = current +step + 'px';
+                        console.log(current);//此时定时器未停止。
+                        if(current !=json[key]){flag = false;}//加上语句判定定时是否该结束
+                    }
+                    if (flag){clearInterval(obj.timer);
+                        if (fn){fn();}                       //很简单   当定时器停止了。 动画就结束了  如果有回调，就应该执行回调
+                    }
+                },30)
+            }
+    function getStyle(obj,attr) {
+                if (obj.currentStyle){return obj.currentStyle[attr];}
+                else {return window.getComputedStyle(obj,null)[attr];}
+            }
+    var liLis = document.getElementsByTagName('li');
+    for (var i = 0 ;i <liLis.length ; i++) {
+        liLis[i].style.backgroundImage = "url(images/"+(i+1)+'.jpg)';
+        liLis[i].onmouseover = function () {
+            for (var j = 0 ;j<liLis.length ; j++) {
+                animate(liLis[j],{width:100});
+            }
+                animate(this,{width:800});
+        }
+        liLis[i].onmouseout = function () {
+            for (var i = 0 ;i<liLis.length;i++){
+                animate(liLis[i],{width:240});
+            }
+        }
+    }
+</script>

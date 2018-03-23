@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;list-style: none;border: 0;}
+        .all {  width: 500px;height: 200px;border: solid 1px #FF6B39;padding: 7px;position: relative;margin: 100px auto;}
+        .screen {width: 500px;height: 200px;position: relative;overflow: hidden}
+        ul {position: absolute;left: 0;top: 0;width: 3000px;}
+        ul li {width: 500px;height: 200px;float: left;}
+        ol {position: absolute;right: 10px;bottom: 10px;line-height: 20px;text-align: center;}
+        ol li {float: left;width: 20px;height: 20px;background: #ffffff;border: 1px solid#ccc;margin-left: 10px;
+        cursor: pointer; }
+        .current {background: yellow;}
+    </style>
+</head>
+<body>
+<div id="all" class="all">
+    <div class="screen">
+        <ul id="ul">
+            <li><img src="images/1.jpg" alt=""></li>
+            <li><img src="images/2.jpg" alt=""></li>
+            <li><img src="images/3.jpg" alt=""></li>
+            <li><img src="images/4.jpg" alt=""></li>
+            <li><img src="images/5.jpg" alt=""></li>
+        </ul>
+    </div>
+   <!-- <ol>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ol>-->
+
+</div>
+</body>
+</html>
+<script>
+   function animate(obj,target) {
+        clearInterval(obj.timer);
+        var step = obj.offsetLeft>target ? -15 : 15;
+        obj.timer = setInterval(function () {
+            var reslut = obj.offsetLeft-target ;
+            obj.style.left =  obj.offsetLeft + step + 'px';
+            if (Math.abs(reslut)<=5){
+                clearInterval(obj.timer);
+                obj.style.left = target+'px';
+            }
+
+        },10)
+    }
+    var box = document.getElementById('all');
+    var ul = document.getElementById('ul');
+    var ulLis = ul.children ;
+    //无缝滚动，克隆第一图片放到最后
+    ul.appendChild(ulLis[0].cloneNode(true));
+    console.log(ulLis.length);
+    //创建ol和ol下的li
+    var ol = document.createElement('ol');
+    box.appendChild(ol);
+    for (var i = 0 ;i<ulLis.length-1;i++){
+        var li = document.createElement('li');
+        li.innerHTML = i+1;
+        ol.appendChild(li);
+    }
+    ol.children[0].className='current';
+    //开始动画
+ //3. 开始动画部分
+   var olLis = ol.children;
+   for(var i=0; i<olLis.length;i++)
+     {
+         olLis[i].index = i;  // 获得当前第几个小li 的索引号
+         olLis[i].onmouseover = function() {
+             for(var j=0;j<olLis.length;j++)
+             {
+                 olLis[j].className = "";  // 所有的都要清空
+             }
+             this.className = "current";
+             animate(ul,-this.index*500)
+             // 调用动画函数  第一个参数  谁动画     第二个  走多少
+             square = key = this.index;  // 当前的索引号为主
+         }
+     }
+   //  4. 添加定时器
+   var timer = null;   // 轮播图的定时器
+   var key = 0;  //控制播放张数
+   var square = 0; // 控制小方块
+   timer = setInterval(autoplay,1000);  // 开始轮播图定时器
+   function autoplay() {
+          key ++;  // 先 ++
+          if(key>ulLis.length - 1)  // 后判断
+          {
+              ul.style.left = 0;  // 迅速调回
+              key = 1;  // 因为第6张就是第一张  第6张播放 下次播放第2张
+          }
+          animate(ul,-key*500);  // 再执行
+          // 小方块
+          square++;
+          if(square > olLis.length -1)
+          {
+              square = 0;
+          }
+          for(var i=0;i<olLis.length;i++)   // 先清除所有的
+          {
+              olLis[i].className = "";
+          }
+          olLis[square].className = "current";  // 留下当前的
+   }
+   //last最后  鼠标经过大盒子要停止定时器
+   box.onmouseover = function() {
+         clearInterval(timer);
+   }
+   box.onmouseout = function() {
+         timer = setInterval(autoplay,1000);  // 开始轮播图定时器
+   }
+
+</script>
